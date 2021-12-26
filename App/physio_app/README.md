@@ -1,16 +1,22 @@
 # physio_app
 
-A new Flutter project.
+Aplikasi Chat Fisioterapi dengan nama "Hi-Physio"
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Aplikasi ini berupa purwarupa (protoype) untuk mengakomodasi
+pengguna smartphone dapat berinteraksi dengan fisioterapi di sekitarnya.
 
-A few resources to get you started if this is your first Flutter project:
+Aplikasi dapat mengirimkan pesan secara "Asynchronous", artinya tidak 
+terjadi secara realtime. Prosesnya adalah memasukkan dan menampilkan data
+yang dimasukkan secara langsung oleh user dan ditampilkan ke user lainnya.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Beberapa catatan terkait aplikasi ini :
+1. Fungsi Search belum mencakup perbedaan antara user dan terapis (masih dalam satu kesatuan document)
+2. Auto Login belum sempurna
+3. Fungsi Register belum diaplikasikan. Login dengan credential dari Google Email
+4. Fungsi Dark Mode (Mode Gelap) belum dapat diimplementasikan
+5. Tidak ada fitur melihat profil pengguna lainnya
+6. Fungsi Chat terdapat delay, maka harus ditekan 2 kali agar masuk ke room chat
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Terima kasih telah melihat Repository ini. Semoga bermanfaat.

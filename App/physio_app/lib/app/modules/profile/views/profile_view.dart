@@ -2,14 +2,28 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:physio_app/app/controllers/auth_controller.dart';
+import 'package:physio_app/app/routes/app_pages.dart';
 
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
+  final authC = Get.find<AuthController>();
+  // final ThemeData light = ThemeData(
+  //   brightness: Brightness.light,
+  //   primaryColor: Colors.white,
+  //   colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.black),
+  // );
+
+  // final ThemeData dark = ThemeData(
+  //   brightness: Brightness.dark,
+  //   primaryColor: Color(0xFF686D76),
+  //   colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.white),
+  // );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(),
+      // backgroundColor: Get.theme.primaryColor,
       body: Column(
         children: [
           Container(
@@ -32,32 +46,38 @@ class ProfileView extends GetView<ProfileController> {
                   margin: EdgeInsets.fromLTRB(15, 50, 15, 15),
                   width: 175,
                   height: 175,
-                  decoration: BoxDecoration(
-                    color: Colors.black38,
-                    borderRadius: BorderRadius.circular(100),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/joanna.png"),
-                      fit: BoxFit.cover,
-                    ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(200),
+                    child: authC.user.value.photoUrl == "noimage"
+                        ? Image.asset(
+                            "assets/logo/noimage.png",
+                            fit: BoxFit.cover,
+                          )
+                        : Image.network(authC.user.value.photoUrl!,
+                            fit: BoxFit.cover),
                   ),
                 ),
                 // Nama Akun
-                Text(
-                  "Lorem Ipsum",
-                  style: GoogleFonts.montserrat(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+                Obx(
+                  () => Text(
+                    "${authC.user.value.name!}",
+                    style: GoogleFonts.montserrat(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
                 // Email Akun
-                Text(
-                  "lorem.ipsum@gmail.com",
-                  style: GoogleFonts.montserrat(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+                Obx(
+                  () => Text(
+                    "${authC.user.value.email!}",
+                    style: GoogleFonts.montserrat(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
               ],
             ),
@@ -70,9 +90,7 @@ class ProfileView extends GetView<ProfileController> {
                     height: 20,
                   ),
                   ListTile(
-                    onTap: () {
-                      // logout(context);
-                    },
+                    onTap: () => Get.toNamed(Routes.CHANGE_PROFILE),
                     leading: Icon(Icons.note_add_outlined),
                     title: Text(
                       "Perbarui Data Profil",
@@ -87,18 +105,19 @@ class ProfileView extends GetView<ProfileController> {
                   ),
                   ListTile(
                     onTap: () {},
-                    leading: Icon(Icons.note_add_outlined),
+                    // => Get.changeTheme(Get.isDarkMode ? light : dark),
+                    leading: Icon(Icons.color_lens),
                     title: Text(
                       "Ganti Tema",
                       style: GoogleFonts.montserrat(
                         fontSize: 22,
                       ),
                     ),
-                    trailing: Text("Light"),
+                    trailing: Text(Get.isDarkMode ? "Dark" : "Light"),
                   ),
                   SizedBox(height: 10),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () => authC.logout(),
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 130),
                       decoration: BoxDecoration(
@@ -139,11 +158,17 @@ class ProfileView extends GetView<ProfileController> {
               children: [
                 Text(
                   "Hi-Physio App",
-                  style: GoogleFonts.montserrat(color: Colors.black54),
+                  style: GoogleFonts.montserrat(
+                    // color: Get.isDarkMode ? Colors.white54 : Colors.black54,
+                    color: Colors.black54,
+                  ),
                 ),
                 Text(
                   "v.1.0",
-                  style: GoogleFonts.montserrat(color: Colors.black54),
+                  style: GoogleFonts.montserrat(
+                    // color: Get.isDarkMode ? Colors.white54 : Colors.black54,
+                    color: Colors.black54,
+                  ),
                 ),
               ],
             ),

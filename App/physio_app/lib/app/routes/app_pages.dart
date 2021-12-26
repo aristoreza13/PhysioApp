@@ -14,6 +14,8 @@ import 'package:physio_app/app/modules/profile/bindings/profile_binding.dart';
 import 'package:physio_app/app/modules/profile/views/profile_view.dart';
 import 'package:physio_app/app/modules/register/bindings/register_binding.dart';
 import 'package:physio_app/app/modules/register/views/register_view.dart';
+import 'package:physio_app/app/modules/search/bindings/search_binding.dart';
+import 'package:physio_app/app/modules/search/views/search_view.dart';
 
 part 'app_routes.dart';
 
@@ -54,6 +56,11 @@ class AppPages {
       name: _Paths.CHAT_ROOM,
       page: () => ChatRoomView(),
       binding: ChatRoomBinding(),
+    ),
+    GetPage(
+      name: _Paths.SEARCH,
+      page: () => SearchView(),
+      binding: SearchBinding(),
     ),
   ];
 }

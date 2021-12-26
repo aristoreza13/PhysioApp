@@ -1,0 +1,24 @@
+{
+    "uid": "UP7s9m0e6eWFSZnb4HqpNMecfWp1",
+    "name": "Reza Aristo Rifandi",
+    "email": "rezaaristo13@gmail.com",
+    "creationTime": "2021-12-15T18:18:43.679",
+    "lastSignInTime": "2021-12-20T22:02:58.671",
+    "photoUrl": "https://lh3.googleusercontent.com/a-/AOh14GhBEvjORjbfzCDS0En-Dj1XRjqzViTJ0xXjAUZYpHM=s96-c",
+    "updatedTime": "2021-12-18T14:44:38.590928",
+    "chats":[
+        {
+            "connections": "fitriani@gmail.com",
+            "chat_id": "RO337DaJnITOcfDgo2ENh8IPanVs",
+            "lastTime": "2021-08-25T13:29:02.7488721",
+            "total_unread": 0
+        },
+        {
+            "connections": "daniel@gmail.com",
+            "chat_id": "JnITOcfDgo2ENh8IPanVsRO337Da",
+            "lastTime": "2021-08-25T13:29:02.7488721",
+            "total_unread": 0
+        }
+    ]
+
+}

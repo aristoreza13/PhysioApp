@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class ErrorScreen extends StatelessWidget {
   @override
@@ -7,7 +8,7 @@ class ErrorScreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Text("Terjadi Kesalahan"),
+          child: Lottie.asset("assets/lottie/error.json"),
         ),
       ),
     );

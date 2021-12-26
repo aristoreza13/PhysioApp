@@ -11,6 +11,7 @@ abstract class Routes {
   static const PROFILE = _Paths.PROFILE;
   static const CHANGE_PROFILE = _Paths.CHANGE_PROFILE;
   static const CHAT_ROOM = _Paths.CHAT_ROOM;
+  static const SEARCH = _Paths.SEARCH;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const PROFILE = '/profile';
   static const CHANGE_PROFILE = '/change-profile';
   static const CHAT_ROOM = '/chat-room';
+  static const SEARCH = '/search';
 }

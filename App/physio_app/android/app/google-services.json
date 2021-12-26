@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "197533783060",
-    "project_id": "physioappnew",
-    "storage_bucket": "physioappnew.appspot.com"
+    "project_number": "793295620727",
+    "project_id": "physioapp-a10aa",
+    "storage_bucket": "physioapp-a10aa.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:197533783060:android:9dd794716b5bdb424f4301",
+        "mobilesdk_app_id": "1:793295620727:android:0fb7714e383eab07879472",
         "android_client_info": {
-          "package_name": "com.example.physioapp"
+          "package_name": "com.physioapp.physio_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "197533783060-kka90krks4cfulceu7g52tdgeeqnb3mk.apps.googleusercontent.com",
+          "client_id": "793295620727-4e7lm3nq0nbq4lbkh4eon0ird85afdl5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.physioapp.physio_app",
+            "certificate_hash": "b4eebe574b36a81e706c7d508cc3f0f11d20a33d"
+          }
+        },
+        {
+          "client_id": "793295620727-dibkhb1pk5mp60s9hm5ekdboorp0hrn5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDDxN5z9oAIjJMYHp2loqnle4jL67TkVQs"
+          "current_key": "AIzaSyD6Y0xLydbR_RrWJeIyEB_yQdS-YY_j9NY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "197533783060-kka90krks4cfulceu7g52tdgeeqnb3mk.apps.googleusercontent.com",
+              "client_id": "793295620727-dibkhb1pk5mp60s9hm5ekdboorp0hrn5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -40,6 +40,8 @@ class IntroductionView extends GetView<IntroductionController> {
           ),
           PageViewModel(
             title: "Daftar Sekarang!",
+            body:
+                "Dapatkan beragam kemudahan untuk konsultasi dengan satu akun",
             image: Container(
               width: Get.width * 0.6,
               height: Get.height * 0.6,
